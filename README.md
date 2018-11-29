@@ -3,20 +3,42 @@
 android快速开发项目介绍，常用公共库（mini-core）整合okHttp、dataBinding、retrofit、glide、eventbus、
 bindingcollectionadapter、agentweb等常用三方工具库；
 #### 使用指南（Usage Guide）
-**从 JCenter 导入**
+
+**方法一、从 jitpack导入[![](https://jitpack.io/v/wavefar/MiniCore.svg)](https://jitpack.io/#wavefar/MiniCore)**
+
+Step 1. Add it in your root build.gradle at the end of repositories:
+
+```groovy
+	allprojects {
+		repositories {
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Step 2. Add the dependency
+
+```groovy
+	dependencies {
+	        implementation 'com.github.wavefar:MiniCore:$lastVersionName'
+	}
+```
+$lastVersionName：master-SNAPSHOT（为最新预览版）；目前正式发布版本为：[![](https://jitpack.io/v/wavefar/MiniCore.svg)](https://jitpack.io/#wavefar/MiniCore)；
+
+**方法二、从 JCenter 导入**
+
 ```groovy
 dependencies {
-	   implementation 'org.wavefar.lib:mini-core:1.0.0'
+	   implementation 'org.wavefar.lib:mini-core:$lastVersionName'
 }
 ```
-**下载源码，本地导入**
+**方法三、下载源码，本地导入**
 
-```
+```groovy
 dependencies {
-     api project(':mini-core')
+     implementation project(':mini-core')
 }
 ```
-最低支持 android 4.4 ,api 19 
+最低支持 android 4.4 ,api 19 ;[![](https://pub.idqqimg.com/wpa/images/group.png)](https://shang.qq.com/wpa/qunwpa?idkey=be89a6425c922840889d46d452821d68618be7a724ea5bb86ace57c86db0a007)
 
 #### 目录介绍
 - base目录，封装常用基类；
